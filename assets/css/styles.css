@@ -4,6 +4,7 @@
 
 :root {
   --primary-color: #152427;
+  --secondary-color: #e2eddf;
   --text-color-black-gray: #575d5e;
   --text-color-white: #fff;
   --primary-font: "Poppins", sans-serif;
@@ -113,10 +114,10 @@ button {
   position: absolute;
   content: "";
   display: inline-block;
-  width: calc(100% - 68% - 16px);
   height: 2px;
   background-color: var(--primary-color);
   left: var(--space-x);
+  right: 60%;
   bottom: -23px;
   z-index: 1;
 }
@@ -269,4 +270,55 @@ button {
   right: 77.64px;
   bottom: 18px;
   transform: rotate(175.95deg);
+}
+
+/* Clients */
+.clients {
+  margin-top: 42px;
+}
+
+.clients__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 85px 122px;
+  border-radius: 101px;
+  background-color: var(--secondary-color);
+}
+
+.clients__item {
+  display: flex;
+  align-items: center;
+}
+
+.clients__name {
+  color: var(--primary-color);
+}
+
+.clients__name--google {
+  font-size: 3.1rem;
+  font-weight: 500;
+}
+
+.clients__name--slack {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.clients__name--agworld {
+  margin-left: 11px;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.clients__name--riotinto {
+  font-family: "Sonsie One", system-ui;
+  font-weight: 400;
+  font-size: 2.3rem;
+}
+
+.clients__name--heroku {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1.995px;
 }
