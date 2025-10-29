@@ -2,11 +2,125 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #152427;
+  --text-color-black-gray: #575d5e;
+  --text-color-white: #fff;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Public Sans", sans-serif;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--primary-font);
   font-size: 1.6rem;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 1140px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+.btn {
+  --height: 57px;
+
+  min-width: 173px;
+  height: var(--height);
+  line-height: var(--height);
+  border-radius: 40px;
+  text-align: center;
+  color: var(--text-color-white);
+  background-color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Header */
+.header {
+  padding-top: 28px;
+  font-family: var(--secondary-font);
+}
+
+.header__body {
+  padding-bottom: 13px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header__body::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-link {
+  --space-x: 19px;
+  padding: 8px var(--space-x);
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-color-black-gray);
+  line-height: 1.55;
+}
+
+.header__nav-link--active,
+.header__nav-link:hover {
+  color: var(--primary-color);
+}
+
+.header__nav-link--active::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: calc(100% - 68% - 16px);
+  height: 2px;
+  background-color: var(--primary-color);
+  left: var(--space-x);
+  bottom: -23px;
+  z-index: 1;
+}
+
+.header__btn--signup {
+  margin-left: 69px;
 }
