@@ -874,3 +874,59 @@ button {
   background: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
+
+/* Features */
+.features {
+  margin-top: 140px;
+  text-align: center;
+}
+
+.features__heading {
+  width: 46%;
+  margin: 0 auto;
+}
+
+.features__desc {
+  width: 48%;
+  margin: 20px auto 0;
+}
+
+.features__list {
+  margin-top: 103px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 35px;
+  width: 350px;
+  height: 362px;
+  border-radius: 160px;
+  border: 1.5px solid #cecece;
+  transition: 0.5s;
+}
+
+.features-item:hover {
+  transform: translateY(-59px);
+  border-color: #fff;
+  box-shadow: 0 36px 100px 0 rgba(111, 120, 111, 0.2);
+}
+
+.features-item__title {
+  margin-top: 20px;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.features-item__desc {
+  margin-top: 12px;
+  color: var(--text-color-light-gray);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.71;
+}
